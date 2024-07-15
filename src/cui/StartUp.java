@@ -9,6 +9,9 @@ public class StartUp {
 		new HealthCareApp().Start(new DomeinController());
 		
 		System.out.println("Health Care.");
+		System.out.println("Health Care.");
+		System.out.println("Health Care.");
+		
 	}
 
 }
