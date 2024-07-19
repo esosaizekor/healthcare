@@ -51,8 +51,9 @@ public class HealthCareProfessional {
 
 	@Override
 	public String toString() {
-		return String.format("I am a %s with ID %d. I am a %s", this.getClass().getSimpleName(),
+		return String.format("I am a %s with ID %d. My name is %s and I work as a %s \n ", this.getClass().getSimpleName(),
 																this.getId(),
+																this.getFullname(),
 																this.getDocter_type().getClass().getSimpleName());
 	}
 

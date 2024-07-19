@@ -3,7 +3,7 @@ package exceptions;
 public class BookException extends Exception {
 
 	public BookException() {
-		super();
+		super("Something went wrong. Try booking again!");
 		// TODO Auto-generated constructor stub
 	}
 
