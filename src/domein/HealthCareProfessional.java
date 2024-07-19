@@ -1,8 +1,18 @@
 package domein;
 
-import org.hamcrest.core.IsInstanceOf;
-import org.hamcrest.core.IsNot;
-import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.NullString;
+
+/**
+* HealthCareProfessional 
+* <p>
+* This is our healthcareprofessional class with the methods 
+* getid
+* setid
+* getfullname
+* setfullname
+* getdoctertype
+* setdoctertype
+*
+*/
 
 public class HealthCareProfessional {
 	private int id;
@@ -10,11 +20,26 @@ public class HealthCareProfessional {
 	private HealthCareProfessional docter_type;
 	
 	// These are two more constructors for the health care professional
+	/**
+	* HealthCareProfessional(int id, String fullname, HealthCareProfessional docter_type)
+	* <p>
+	* De gebruiker meldt zich aan, werpt exceptie 
+	* @param  fullname fullname
+	*/
 	
 	public HealthCareProfessional(String fullname) {
 		this.setFullname(fullname);
 		// TODO Auto-generated constructor stub
 	}
+
+	/**
+	* HealthCareProfessional(int id, String fullname, HealthCareProfessional docter_type)
+	* <p>
+	* De gebruiker meldt zich aan, werpt exceptie 
+	* @param  id  id
+	* @param  fullname fullname
+    * @param  docter_type docter_type
+	*/
 	
 	public HealthCareProfessional(int id, String fullname, HealthCareProfessional docter_type)
 	{
