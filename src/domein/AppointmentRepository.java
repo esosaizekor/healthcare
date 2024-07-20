@@ -1,5 +1,6 @@
 package domein;
 
+import java.sql.Time;
 import java.util.List;
 
 import persistentie.AppointmentMapper;
@@ -32,5 +33,23 @@ public class AppointmentRepository {
 		}
 		
 		return newap;
+	}
+	
+	public void createNewAppointment(String fullname, String mobilephone, Time prefferedtimeslot, HealthCareProfessional hcp)
+	{
+		am.getAppointments().add(new Appointment(fullname, mobilephone, prefferedtimeslot, hcp ));	
+	}
+	
+	public void cancelBooking(String mobilephone)
+	{
+		for(Appointment ap : am.getAppointments())
+		{
+			if(ap.getMobilephone().equals(mobilephone))
+			{
+				am.getAppointments().remove(ap);
+				break;
+			}
+		}
+				
 	}
 }

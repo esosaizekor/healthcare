@@ -29,7 +29,12 @@ public class DomeinController {
 	
 	public void createNewAppointment(String fullname, String mobilephone, Time prefferedtimeslot, HealthCareProfessional hcp)
 	{
-		ar.getAppointments().add(new Appointment(fullname, mobilephone, prefferedtimeslot, hcp ));
+		ar.createNewAppointment(fullname, mobilephone, prefferedtimeslot, hcp );
+	}
+	
+	public void cancelBooking(String mobilephone)
+	{
+		ar.cancelBooking(mobilephone);	
 	}
 	
 }
