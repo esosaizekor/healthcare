@@ -86,4 +86,14 @@ public class Appointment {
 		this.hcp = hcp;
 	
 	}   
+	
+	@Override
+	public String toString() {
+		return String.format("An %s by %s was booked at %s for %s a %s. \n", this.getClass().getSimpleName(),
+																this.getFullname(),
+																this.prefferedtimeslot.toString(),
+																this.getHcp().getFullname(),
+																this.getHcp().getClass().getSimpleName());
+	}
+	
 }

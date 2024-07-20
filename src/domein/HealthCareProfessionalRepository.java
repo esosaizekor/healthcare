@@ -27,6 +27,7 @@ public class HealthCareProfessionalRepository {
 			if (hcp.getFullname().equals(fullname))
 			{
 				newHcp =  hcp;	
+				break;
 			}			
 			
 		}
