@@ -8,7 +8,7 @@ import domein.Appointment;
 * <p>
 * This is our AppointmentDTO(Data Transfer Object) class with a constructor
 * Which we will use strictly for cui or gui app to print objects 
-* AppointmentDTO(List<Appointment> ap) 
+*  
 	* <p>
 	* This is the constructor  
 	* @param ap ap

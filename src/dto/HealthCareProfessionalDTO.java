@@ -8,7 +8,7 @@ import domein.HealthCareProfessional;
 * <p>
 * This is our HealthCareProfessionalDTO(Data Transfer Object) class with a constructor
 * Which we will use strictly for cui or gui app to print objects 
-* HealthCareProfessionalDTO(List<HealthCareProfessional> hcp)
+* 
 	* <p>
 	* This is the constructor  
 	* @param hcp hcp
