@@ -16,6 +16,15 @@ import domein.Appointment;
 import domein.GeneralPractitioners;
 import domein.HealthCareProfessional;
 import exceptions.BookException;
+/**
+* AppointmentTest 
+* <p>
+* This is our AppointmentTest class with the methods 
+* hasid
+* hasfullname
+* hasPrefferedTime
+* hasHealthCareProfessional
+*/
 
 
 class AppointmentTest {
@@ -60,7 +69,7 @@ class AppointmentTest {
 	* hasPrefferedTime(String prefferedtime) 
 	* <p>
 	* Test 
-	* @param  fullname  fullname
+	* @param  prefferedtime  prefferedtime
 	*/
 
 	@ParameterizedTest
@@ -73,10 +82,10 @@ class AppointmentTest {
 	}
 
 	/**
-	* hasPrefferedTime(String prefferedtime) 
+	* hasHealthCareProfessional(HealthCareProfessional hcp) 
 	* <p>
 	* Test 
-	* @param  fullname  fullname
+	* @param  hcp  hcp
 	*/
 
 	@ParameterizedTest

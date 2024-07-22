@@ -1,6 +1,7 @@
 package cui;
 
 import domein.DomeinController;
+import exceptions.BookException;
 
 /**
 * StartUp 
@@ -14,7 +15,12 @@ public class StartUp {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new HealthCareApp().Start(new DomeinController());
+		try {
+			new HealthCareApp().Start(new DomeinController(),1);
+		} catch (BookException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 				
 	}
 
