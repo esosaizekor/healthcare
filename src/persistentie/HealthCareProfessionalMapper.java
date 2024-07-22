@@ -8,7 +8,13 @@ import domein.Dietitian;
 import domein.GeneralPractitioners;
 import domein.HealthCareProfessional;
 import domein.Nurse;
-
+/**
+* HealthCareProfessionalMapper
+* <p>
+* We use mappers to store data or rertrieve then from the database
+* This is our HealthCareProfessionalMapper class with its method 
+* getHealthCareProfessionals
+*/
 public class HealthCareProfessionalMapper {
 	
 	private List<HealthCareProfessional> hcp;

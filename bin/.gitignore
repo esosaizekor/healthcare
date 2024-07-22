@@ -1,7 +1,6 @@
+/cui/
 /domein/
-/test/
-/doc/
+/dto/
 /exceptions/
 /persistentie/
-/dto/
-/cui/
+/test/

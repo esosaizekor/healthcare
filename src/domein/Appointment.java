@@ -4,6 +4,20 @@ import java.sql.Time;
 
 import exceptions.BookException;
 
+/**
+* Appointment
+* <p>
+* This is our Appointment class with the methods 
+* getFullname
+* setFullname
+* getMobilephone
+* setMobilephone
+* getPrefferedtimeslot
+* setPrefferedtimeslot
+* getHcp				
+* setHcp
+*/
+
 public class Appointment {
 
    private String fullname;
@@ -11,18 +25,30 @@ public class Appointment {
    private Time prefferedtimeslot;
    private HealthCareProfessional hcp;
 
+	/**
+	* Appointment(String fullname, String mobilephone, Time prefferedtimeslot, HealthCareProfessional hcp) 
+	* <p>
+	* All bookings are created here
+   * @param  fullname fullname
+   * @param  mobilephone mobilephone
+   * @param  prefferedtimeslot prefferedtimeslot 
+   * @param  hcp hcp 
+   * 	*/
+   
    public Appointment(String fullname, String mobilephone, Time prefferedtimeslot, HealthCareProfessional hcp) {
 	
 	try {
 		this.setFullname(fullname);
 		this.setMobilephone(mobilephone);
+		this.setPrefferedtimeslot(prefferedtimeslot);
+		this.setHcp(hcp);
 	} catch (BookException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 	
-	this.setPrefferedtimeslot(prefferedtimeslot);
-	this.setHcp(hcp);
+	
+	
    }
    
    public String getFullname() {
@@ -74,16 +100,63 @@ public class Appointment {
 		return prefferedtimeslot;
 	}
 
-	public void setPrefferedtimeslot(Time prefferedtimeslot) {
-		this.prefferedtimeslot = prefferedtimeslot;
+	public void setPrefferedtimeslot(Object prefferedtimeslot) throws BookException {
+		
+		if(prefferedtimeslot instanceof Time)
+		{
+			if(prefferedtimeslot.toString().isEmpty() || prefferedtimeslot.toString().isBlank() || prefferedtimeslot.toString().equals(null))
+			{
+				throw new BookException("Number not valid!");				
+			}
+			else
+			{
+				this.prefferedtimeslot = (Time)prefferedtimeslot;
+				
+			}
+	
+		}
+		
+		if(prefferedtimeslot instanceof String)
+		{
+			Time newT = null;
+			newT = Time.valueOf((String)prefferedtimeslot);
+			
+			if(newT instanceof Time)
+			{
+				this.prefferedtimeslot = (Time)newT;
+								
+			}
+			else
+			{
+				throw new BookException("Not a valid time!");
+				
+			}
+	
+		}
+						
+		
 	}
+
 
 	public HealthCareProfessional getHcp() {
 		return hcp;
 	}
 
-	public void setHcp(HealthCareProfessional hcp) {
-		this.hcp = hcp;
+	public void setHcp(HealthCareProfessional hcp) throws BookException {
+	
+			if(hcp != null)
+			{
+				if(hcp instanceof HealthCareProfessional)
+				{
+					this.hcp = hcp;
+				}
+			}
+			else
+			{
+				throw new BookException("Please try and book again.");
+			}
+
+
 	
 	}   
 	

@@ -1,19 +1,48 @@
 package domein;
 
+/**
+* GeneralPractitioners
+* <p>
+* This is our GeneralPractitioners class with the methods 
+* setFloor
+* getFloor
+*/
 public class GeneralPractitioners extends HealthCareProfessional {
 
 	private String floor;
+	/**
+	* Dietitian(String fullname)
+	* <p>
+	* A health care professional 
+	* @param  fullname fullname
+	*/
 	
 	public GeneralPractitioners(String fullname) {
 		super(fullname);
 		this.setFloor("3");
 		// TODO Auto-generated constructor stub
 	}
-
+	/**
+	* Dietitian(int id, String fullname, HealthCareProfessional docter_type) 
+	* <p>
+	* A health care professional 
+	* @param  id id
+	* @param  fullname fullname
+	* @param  docter_type docter_type
+	*/
 	public GeneralPractitioners(int id, String fullname, HealthCareProfessional docter_type) {
 		super(id, fullname, docter_type);
 		// TODO Auto-generated constructor stub
 	}
+	/**
+	* Dentist(int id, String fullname, HealthCareProfessional docter_type, String floor)  
+	* <p>
+	* A health care professional 
+	* @param  id id
+	* @param  fullname fullname
+	* @param  docter_type docter_type
+	* @param  floor floor 
+	*/
 
 	public GeneralPractitioners(int id, String fullname, HealthCareProfessional docter_type, String floor) {
 		super(id, fullname, docter_type);

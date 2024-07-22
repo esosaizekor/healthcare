@@ -4,10 +4,26 @@ import domein.DomeinController;
 import dto.AppointmentDTO;
 import dto.HealthCareProfessionalDTO;
 
+/**
+* HealthCareApp
+* <p>
+* This is our HealthCareApp class with the methods 
+* Start
+* getAppointments
+* PrintExistingAppointment
+*/
+
 public class HealthCareApp {
 	
 	HealthCareProfessionalDTO hcpDTO = null;
 	AppointmentDTO apDTO = null;
+
+	/**
+	* Start(DomeinController DC)
+	* <p>
+	* All booking and healthcareprofessionals are loaded  
+    * @param  DC DC
+	*/
 	
 	public void Start(DomeinController DC)
 	{
@@ -18,6 +34,13 @@ public class HealthCareApp {
 		System.out.println(hcpDTO.hcp().toString());
 		PrintExistingAppointment();		
 	}
+	
+	/**
+	* public void PrintExistingAppointment()
+	* <p>
+	* Print all existing bookings. 
+	*/
+	
 	
 	public void PrintExistingAppointment()
 	{

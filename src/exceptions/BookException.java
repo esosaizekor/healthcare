@@ -1,7 +1,20 @@
 package exceptions;
 
-public class BookException extends Exception {
+/**
+* BookException
+* <p>
+* This is our BookException class with its method 
+* BookException
+*/
 
+public class BookException extends Exception {
+	/**
+	* BookException()
+	* <p>
+	* This is the constructor  
+    * More details are in the Exception suite.	
+    * 
+    */	
 	public BookException() {
 		super("Something went wrong. Try booking again!");
 		// TODO Auto-generated constructor stub
